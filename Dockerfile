@@ -12,10 +12,10 @@ RUN apt-get update && apt-get -y install \
 
 RUN mkdir /home/django
 WORKDIR /home/django
-ADD    ./django/requirements.txt   /home/django
+ADD    ./Django/requirements.txt   /home/django
 RUN    pip install -r requirements.txt
 
-ADD    ./django/djangosample   /home/django/djangosample
-ADD    ./django/manage.py      /home/django/
+ADD    ./Django/djangosample   /home/django/djangosample
+ADD    ./Django/manage.py      /home/django/
 
 CMD ["python", "manage.py", "runserver", "0:8100"]
